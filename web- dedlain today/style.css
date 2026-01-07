@@ -1,0 +1,155 @@
+:root {
+    --bg-main: #f4f4f4;
+    --bg-white: #FFFFFF;
+    --bg-black: #0E0E0E;
+    --text-color-white: #FFFFFF;
+    --text-color-black: #0E0E0E;
+    --border-color-grey: #0e0e0e0d;
+    --font-large: 60px;
+    --font-medium: 40px;
+    --font-regular: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: Inter, sans-serif;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+header {
+    background-color: var(--bg-main);
+    border-bottom: 1px solid var(--border-color-grey);
+    height: 80px;
+    padding: 20px 0;
+}
+
+.wrapper {
+    width: clamp(720px, 100%, 1400px);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu .item {
+    position: relative;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: var(--font-regular);
+}
+
+.menu .item.uppercase {
+    text-transform: uppercase;
+}
+
+.menu .item::before {
+    content: '[';
+    position: absolute;
+    left: -15px;
+    transition: 0.3s;
+}
+
+.menu .item::after {
+    content: ']';
+    position: absolute;
+    right: -15px;
+    transition: 0.3s;
+}
+
+.menu .item:hover::before {
+    left: -5px;
+}
+
+.menu .item:hover::after {
+    right: -5px;
+}
+
+.menu .button {
+    padding: 10px 16px;
+    background-color: var(--bg-black);
+    color: var(--text-color-white);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container_1 .wrapper.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: var(--font-medium);
+    margin-bottom: 16px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-img img {
+    width: 400px;
+    border-radius: 16px;
+}
+
+.main-btn {
+    background-color: var(--bg-black);
+    color: var(--text-color-white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 30px;
+}
+
+.service img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.container_3 {
+    background-color: var(--bg-black);
+    color: var(--text-color-white);
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 12px;
+}
